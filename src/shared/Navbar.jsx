@@ -7,7 +7,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative flex items-center justify-between px-6 md:px-12 py-6">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white flex items-center justify-between px-6 md:px-12 py-4">
 
       {/* Logo */}
       <Link to="/" className="flex items-center gap-3">
@@ -75,7 +75,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
-          <ul className="flex flex-col items-center gap-6 py-8 font-urbanist text-[18px] text-[#181818]">
+          <ul className="flex flex-col items-start gap-6 py-8 px-7 font-urbanist text-[18px] text-[#181818]">
 
             <li>
               <Link to="/" onClick={() => setMenuOpen(false)}>

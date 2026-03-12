@@ -7,12 +7,15 @@ import Projects from "./pages/Projects";
 // import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProjectDetails from "./pages/ProjectDetails";
+import ScrollToTop from "./components/ScrollToTop";
+import Footer from "./shared/Footer"
 
 function App() {
   return (
     <BrowserRouter>
 
-      {/* Navbar visible on every page */}
+    <ScrollToTop />
+
       <Navbar />
 
       <Routes>
@@ -22,6 +25,8 @@ function App() {
         {/* <Route path="/about" element={<About />} /> */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
 
     </BrowserRouter>
   );

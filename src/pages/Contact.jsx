@@ -2,7 +2,7 @@ import avatar from "../assets/images/avatar.png";
 
 const Contact = () => {
   return (
-    <section className="px-6 md:px-20 mt-20">
+  <section className="px-6 md:px-20 mt-20 pb-20">
 
       {/* Header */}
       <p className="text-[#181818] font-cormorant italic font-[700] text-[18px] md:text-[24px]">
@@ -108,7 +108,7 @@ const Contact = () => {
 </div>
 
 {/* Bottom Row (Email + Submit) */}
-<div className="flex flex-col md:flex-row md:items-end md:justify-between mt-2 gap-6">
+<div className="grid md:grid-cols-2 mt-4 gap-6">
 
   {/* Email */}
   <div>
@@ -121,14 +121,14 @@ const Contact = () => {
   </div>
 
   {/* Submit */}
-  <div className="md:w-[420px] w-full">
-    <button
-      type="submit"
-      className="w-full bg-black text-white py-4 rounded-full font-urbanist text-[18px]"
-    >
-      Submit
-    </button>
-  </div>
+  <div className="flex justify-center mb-2">
+  <button
+    type="submit"
+    className="w-full md:w-[550px] bg-black text-white py-2 rounded-full font-urbanist text-[18px]"
+  >
+    Submit
+  </button>
+</div>
 
 </div>
     </section>

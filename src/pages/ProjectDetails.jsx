@@ -3,10 +3,18 @@ import overviewImage from "../assets/images/overviewimage.png";
 import highlight1 from "../assets/images/highlight1.png";
 import highlight2 from "../assets/images/highlight2.png";
 import resultImage from "../assets/images/project3.png";
+import project2 from "../assets/images/project2.png";
+import Contact from "../pages/Contact";
+import { useEffect } from "react";
 
 const ProjectDetails = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   return (
-    <section className="px-6 md:px-20 py-16">
+   <section className="px-6 md:px-20 pt-24 pb-16 md:pb-20">
 
       {/* HERO IMAGE */}
       <div className="relative rounded-[24px] overflow-hidden">
@@ -281,6 +289,107 @@ const ProjectDetails = () => {
 
 
     </section>
+
+
+
+
+{/* MORE WORK */}
+<div className="mt-24">
+
+  {/* Header */}
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+    <div>
+      <p className="text-[#000000] text-[24px] font-cormorant italic font-[700]">
+        (04 Projects)
+      </p>
+
+      <h2 className="text-[36px] md:text-[80px] font-urbanist font-[600]">
+        More Work.
+      </h2>
+    </div>
+
+    <p className="max-w-[420px] text-[#707070] text-[18px] font-[400] font-urbanist">
+     Hungry for more? Here's some more articles you might enjoy, 
+authored by our talented team.
+    </p>
+
+  </div>
+
+  {/* Divider */}
+  <div className="border-t border-black mt-6 mb-10"></div>
+
+
+  {/* Cards */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    {/* Card 1 */}
+    <div>
+
+  <div className="rounded-[20px] overflow-hidden">
+  <img
+    src={resultImage}
+    className="w-full h-[300px] object-cover"
+  />
+</div>
+
+      <span onClick={ () => Navigate()} className="inline-block mt-3 px-3 py-1 bg-[#E3E3E3] rounded-full font-[400] text-[14px] font-urbanist cursor-pointer">
+        Website Design
+      </span>
+
+      <h3 className="text-[32px] text-[#000000] font-urbanist font-[600] mt-2">
+        Shadow Studio
+      </h3>
+
+    </div>
+
+
+    {/* Card 2 */}
+    <div>
+
+<div className="rounded-[20px] overflow-hidden">
+  <img
+    src={project2}
+    className="w-full h-[300px] object-cover"
+  />
+</div>
+
+      <span className="inline-block mt-3 px-3 py-1 bg-[#E3E3E3] rounded-full font-[400] text-[14px] font-urbanist">
+        Website Development
+      </span>
+
+      <h3 className="text-[32px] text-[#000000] font-urbanist font-[600] mt-2">
+        Shadow Studio
+      </h3>
+
+    </div>
+
+
+    {/* Card 3 */}
+    <div>
+
+<div className="rounded-[20px] overflow-hidden">
+  <img
+    src={resultImage}
+    className="w-full h-[300px] object-cover"
+  />
+</div>
+
+      <span className="inline-block mt-3 px-3 py-1 bg-[#E3E3E3] rounded-full font-[400] text-[14px] font-urbanist">
+        Framework Design
+      </span>
+
+      <h3 className="text-[32px] text-[#000000] font-urbanist font-[600]  mt-2">
+        Shadow Studio
+      </h3>
+
+    </div>
+
+  </div>
+
+</div>
+
+<Contact />
 
     </section>
 

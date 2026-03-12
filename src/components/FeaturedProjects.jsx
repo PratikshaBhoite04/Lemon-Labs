@@ -1,5 +1,6 @@
 import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.png";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -25,6 +26,7 @@ const projects = [
 ];
 
 const FeaturedProjects = () => {
+  const navigate = useNavigate();
   return (
     <section className="px-6 md:px-20 mt-16">
 
@@ -72,8 +74,8 @@ const FeaturedProjects = () => {
     {project.title}
   </h3>
 
-  <span className="shrink-0 text-[#181818] px-3 py-1 bg-[#E3E3E3] 
-  font-urbanist font-[400] text-[12px] md:text-[16px] rounded-full whitespace-nowrap">
+  <span onClick={() => navigate("/project-details")} className="shrink-0 text-[#181818] px-3 py-1 bg-[#E3E3E3] 
+  font-urbanist font-[400] text-[12px] md:text-[16px] rounded-full whitespace-nowrap cursor-pointer">
     {project.tag}
   </span>
 

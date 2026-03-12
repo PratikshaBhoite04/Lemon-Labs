@@ -22,7 +22,7 @@ const Projects = () => {
           (Projects)
         </p>
 
-        <h1 className="text-[36px] md:text-[70px] font-urbanist font-[600] leading-[0.75]">
+        <h1 className="text-[36px] md:text-[70px] font-urbanist font-[600] leading-[0.80]">
           See how we <br />
           <span className="text-yellow-400 italic font-cormorant">
             make an impact.
