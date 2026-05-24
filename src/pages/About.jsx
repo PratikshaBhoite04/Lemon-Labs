@@ -8,7 +8,7 @@ const About = () => {
     <>
       <Navbar />
 
-      <section className="bg-[#FFFFFF] min-h-screen px-6 sm:px-8 md:px-20 pt-32 md:pt-40 pb-20 overflow-hidden">
+<section className="bg-[#FFFFFF] min-h-screen px-6 sm:px-8 md:px-20 pt-32 md:pt-40 pb-20">
 
         {/* HERO */}
         <div className="text-center">
@@ -139,7 +139,7 @@ const About = () => {
     <div className="flex flex-col md:flex-row md:justify-between gap-6">
 
       {/* LEFT TEXT */}
-      <div className="max-w-[70px]">
+      <div className="max-w-[700px]">
 
         <h3
           className="
@@ -238,14 +238,12 @@ const About = () => {
 </div>
 
 
-        {/* PROCESS SECTION */}
-<div className="mt-24 md:mt-40">
-  <ProcessSection />
-</div>
+{/* PROCESS SECTION */}
+<ProcessSection />
 
 
 {/* WHO WE BUILD FOR */}
-<div className="mt-28 md:mt-40">
+<div className="mt-20 md:mt-20">
 
 
   {/* TOP ROW */}
