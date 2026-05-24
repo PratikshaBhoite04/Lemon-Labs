@@ -1,7 +1,9 @@
 import { useState } from "react";
-import clientImg from "../assets/images/clientimg.png";
+import clientImg from "../assets/images/profile.png";
 import arrow1 from "../assets/images/arrow1.png";
 import arrow2 from "../assets/images/arrow2.png";
+
+import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -73,9 +75,13 @@ const WhatClientsSay = () => {
         <div>
 
           {/* Stars */}
-          <div className="flex text-yellow-400 mb-4">
-            ⭐⭐⭐⭐⭐
-          </div>
+         <div className="flex mb-4 gap-1">
+  <FaStar className="text-[#F5DD53]" />
+  <FaStar className="text-[#F5DD53]" />
+  <FaStar className="text-[#F5DD53]" />
+  <FaStar className="text-[#F5DD53]" />
+  <FaStar className="text-[#F5DD53]" />
+</div>
 
           {/* Quote */}
           <p className="text-[18px] md:text-[28px] font-urbanist font-[400] text-[#181818] mb-6 max-w-2xl">

@@ -31,9 +31,12 @@ const Footer = () => {
           </p>
 
           {/* Button */}
-          <button className="bg-white text-[#181818] font-[400] font-urbanist md:text-[21px] px-6 py-2 rounded-full font-urbanist text-[16px]">
-            Book a 15 mins call
-          </button>
+          <a
+  href="#contact"
+  className="bg-white text-[#181818] font-[400] md:text-[21px] px-6 py-2 rounded-full font-urbanist text-[16px] inline-flex items-center justify-center"
+>
+  Contact us
+</a>
 
         </div>
 
@@ -47,9 +50,9 @@ const Footer = () => {
               <Link to="/projects">Projects</Link>
             </li>
 
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
+          <li>
+  <a href="#services">Services</a>
+</li>
 
             <li>
               <Link to="/about">About</Link>
@@ -88,14 +91,14 @@ const Footer = () => {
     <FiLinkedin />
   </a>
 
-  <a
+  {/* <a
     href="https://twitter.com"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-yellow-400 transition"
   >
     <FaXTwitter />
-  </a>
+  </a> */}
 
   <a
     href="https://www.instagram.com"

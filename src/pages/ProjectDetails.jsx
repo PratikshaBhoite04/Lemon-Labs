@@ -1,4 +1,4 @@
-import hero from "../assets/images/project-detail-hero.png";
+import hero from "../assets/images/project.png";
 import overviewImage from "../assets/images/overviewimage.png";
 import highlight1 from "../assets/images/highlight1.png";
 import highlight2 from "../assets/images/highlight2.png";
@@ -14,8 +14,7 @@ const ProjectDetails = () => {
 }, []);
 
   return (
-   <section className="px-6 md:px-20 pt-24 pb-16 md:pb-20">
-
+<section className="px-6 md:px-20 pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20">
       {/* HERO IMAGE */}
       <div className="relative rounded-[24px] overflow-hidden">
 
@@ -238,7 +237,7 @@ const ProjectDetails = () => {
 </div>
 
   {/* OR TEXT */}
-  <p className="text-start font-urbanist font-[600] md:text-[39] text-[18px] text-[#181818] my-8">
+  <p className="text-start font-urbanist font-[600] md:text-[42] text-[22px] text-[#181818] my-8">
     OR
   </p>
 

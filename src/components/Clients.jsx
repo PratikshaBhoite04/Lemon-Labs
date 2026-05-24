@@ -15,47 +15,46 @@ const Clients = () => {
     <section className="px-6 md:px-20 mt-20 mb-10">
 
       {/* Heading */}
-<div className="mb-6">
+      <div className="mb-6">
 
-  {/* Mobile subtitle */}
-  <p className="text-[#181818] font-cormorant font-[700] text-[16px] italic mb-2 md:hidden">
-    (02 Brands we have worked with)
-  </p>
+        {/* Mobile subtitle */}
+        <p className="text-[#181818] font-cormorant font-[700] text-[16px] italic mb-2 md:hidden">
+          (02 Brands we have worked with)
+        </p>
 
-  <div className="flex items-end justify-between">
-    
-    <h2 className="text-[36px] md:text-[80px] font-urbanist font-[600]">
-      Clients
-    </h2>
+        <div className="flex items-end justify-between">
 
-    {/* Desktop subtitle */}
-    <p className="text-[#181818] font-cormorant font-[700] text-[24px] italic hidden md:block">
-      (02 Brands we have worked with)
-    </p>
+          <h2 className="text-[36px] md:text-[80px] font-urbanist font-[600]">
+            Clients
+          </h2>
 
-  </div>
+          {/* Desktop subtitle */}
+          <p className="text-[#181818] font-cormorant font-[700] text-[24px] italic hidden md:block">
+            (02 Brands we have worked with)
+          </p>
 
-</div>
+        </div>
+
+      </div>
 
       {/* Divider */}
-      <div className="border-t border-black mb-8"></div>
+      <div className="border-t border-black mb-10"></div>
 
-      {/* Marquee Container */}
-      <div className="relative overflow-hidden">
+      {/* Marquee */}
+      <div className="relative overflow-hidden py-4">
 
         {/* Left Fade */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
 
         {/* Right Fade */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
 
-        {/* Scrolling Row */}
-        <div className="flex gap-16 animate-scroll whitespace-nowrap">
+        <div className="flex min-w-max animate-marquee gap-16">
 
-          {[...clients, ...clients].map((client, index) => (
+          {[...clients, ...clients, ...clients].map((client, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 opacity-80"
+              className="flex items-center gap-3 shrink-0 opacity-90"
             >
               <img
                 src={client.logo}
@@ -63,7 +62,7 @@ const Clients = () => {
                 className="h-5 md:h-6 object-contain"
               />
 
-              <span className="font-urbanist  font-[700] text-sm text-[#000000] md:text-[25px]">
+              <span className="font-urbanist font-[700] text-sm md:text-[25px] text-black whitespace-nowrap">
                 {client.name}
               </span>
             </div>
