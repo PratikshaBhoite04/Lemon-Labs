@@ -50,12 +50,12 @@ const Loader = ({ onFinish }) => {
         return (prev + 1) % images.length;
       });
 
-    }, 520);
+    }, 1400);
 
     // DIVIDER APPEAR
     const dividerTimer = setTimeout(() => {
       setShowDivider(true);
-    }, 4200);
+  }, 5400);
 
     // OPEN PAGE
     const splitTimer = setTimeout(() => {
@@ -63,7 +63,7 @@ const Loader = ({ onFinish }) => {
       setShowDivider(false);
       setShowSplit(true);
 
-    }, 5000);
+  }, 6400);
 
     // FINISH
     const finishTimer = setTimeout(() => {
@@ -72,7 +72,7 @@ const Loader = ({ onFinish }) => {
 
       onFinish();
 
-    }, 6200);
+   }, 7600);
 
     return () => {
       clearInterval(imageInterval);
@@ -279,9 +279,10 @@ const Loader = ({ onFinish }) => {
                     opacity: 0,
                     scale: 1.06
                   }}
-                  transition={{
-                    duration: 0.28
-                  }}
+transition={{
+  duration: 0.9,
+  ease: [0.22, 1, 0.36, 1]
+}}
                   className={`
                     object-contain
                     ${step === 0
@@ -382,7 +383,7 @@ const Loader = ({ onFinish }) => {
               clipPath: "inset(0 0 100% 0)"
             }}
             transition={{
-              duration: 1.6,
+              duration: 1.1,
               ease: [0.87, 0, 0.13, 1]
             }}
             className="

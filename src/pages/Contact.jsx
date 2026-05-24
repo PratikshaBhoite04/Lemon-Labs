@@ -80,32 +80,136 @@ const Contact = () => {
   id="contact"
 className="scroll-mt-32 px-5 sm:px-6 md:px-20 pt-32 md:pt-20 pb-16 md:pb-20">
 
-      {/* Header */}
-      <p className="text-[#181818] font-cormorant italic font-[700] text-[16px] sm:text-[18px] md:text-[24px]">
-        (05 Contact Us)
-      </p>
+{/* Header */}
+<div className="relative pt-5 md:pt-24 pb-10 md:pb-16">
+{/* TOP ROW */}
+<div
+  className="
+  flex
+  flex-col
+  md:flex-row
+  md:items-start
+  md:justify-between
+  "
+>
 
-      {/* Top Section */}
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-10 mt-2">
+  {/* LEFT SIDE */}
+  <div className="w-full">
 
-        <h2 className="text-[40px] sm:text-[52px] md:text-[80px] leading-[95%] font-urbanist font-[600] max-w-[700px]">
-          Lets Share{" "}
-          <span className="text-yellow-400 italic font-cormorant font-[600]">
-            Ideas
-          </span>
-        </h2>
+    {/* MOBILE CONTACT */}
+    <p
+      className="
+      md:hidden
+      text-center
+      mb-4
 
-        <p className="max-w-[500px] text-[#707070] font-urbanist text-[16px] sm:text-[18px] leading-[155%]">
-          Have a question, or ready to kick off your project?
-          We'd love to hear from you. Drop us a message,
-          and our team will get back to you within 24 hours
-          to discuss how we can help your business thrive.
-        </p>
+      text-[#181818]
+      font-cormorant
+      italic
+      font-[700]
+      text-[16px]
+      "
+    >
+      (Contact us)
+    </p>
 
-      </div>
+    {/* HEADING WRAPPER */}
+    <div
+      className="
+      relative
 
-      {/* Divider */}
-      <div className="border-t border-black mt-6 mb-10 md:mb-14"></div>
+      flex
+      flex-col
+
+      items-center
+      md:items-start
+      "
+    >
+
+      {/* BLACK TEXT */}
+      <h2
+        className="
+        relative
+        z-20
+
+        text-[#181818]
+        font-urbanist
+        font-[600]
+
+        text-center
+        md:text-left
+
+        leading-[90%]
+
+        text-[42px]
+        sm:text-[58px]
+        md:text-[96px]
+
+        max-w-[300px]
+        sm:max-w-[550px]
+        md:max-w-[1100px]
+        "
+      >
+        Let’s turn your idea into
+      </h2>
+
+      {/* YELLOW TEXT */}
+      <h2
+        className="
+        relative
+        z-10
+
+        text-[#F5DD53]
+        font-cormorant
+        italic
+        font-[600]
+
+        text-center
+        md:text-left
+
+        leading-[85%]
+
+        -mt-1
+        md:-mt-8
+
+        text-[53px]
+        sm:text-[72px]
+        md:text-[96px]
+        "
+      >
+        something refreshing.
+      </h2>
+
+    </div>
+
+  </div>
+
+  {/* DESKTOP CONTACT */}
+  <p
+    className="
+    hidden
+    md:block
+
+    text-[#181818]
+    font-cormorant
+    italic
+    font-[700]
+
+    text-[22px]
+
+    whitespace-nowrap
+    mt-12
+    "
+  >
+    (Contact us)
+  </p>
+
+</div>
+
+</div>
+
+{/* Divider */}
+<div className="border-t border-black mt-10 md:mt-8 mb-12 md:mb-16"></div>
 
       {/* Main Content */}
       <div className="grid lg:grid-cols-2 gap-12 md:gap-16">

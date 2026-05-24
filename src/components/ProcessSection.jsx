@@ -90,15 +90,15 @@ const ProcessSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[450vh] bg-[#FFFFFF]"
+      className="relative h-[260vh] bg-[#FFFFFF]"
     >
       {/* STICKY SECTION */}
-      <div className="sticky top-0 min-h-screen md:h-screen overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden">
 
-        <div className="h-full px-6 md:px-20 py-10 md:py-16 flex flex-col">
+        <div className="h-full px-6 md:px-20 pt-16 md:pt-24 pb-6 md:pb-24 flex flex-col">
 
           {/* TOP HEADER */}
-          <div>
+          <div className="mt-6 md:mt-0">
 
             <p className="text-[16px] md:text-[24px] font-cormorant italic font-[700] text-[#181818]">
               (03 Process)
@@ -106,7 +106,7 @@ const ProcessSection = () => {
 
             <div className="flex flex-col md:flex-row justify-between md:items-start mt-2 md:mt-3">
 
-              <h2 className="text-[40px] md:text-[88px] leading-none text-[#181818] font-urbanist font-[600]">
+              <h2 className="text-[34px] md:text-[88px] leading-none text-[#181818] font-urbanist font-[600]">
                 How we work.
               </h2>
 
@@ -118,7 +118,7 @@ const ProcessSection = () => {
 
             </div>
 
-            <div className="border-t border-black/40 mt-6 md:mt-8"></div>
+            <div className="border-t border-black/40 mt-5 md:mt-8"></div>
 
           </div>
 
@@ -130,6 +130,7 @@ const ProcessSection = () => {
               flex-col
               justify-start
               md:justify-center
+
               pt-4
               md:pt-0
             "
@@ -164,157 +165,28 @@ const ProcessSection = () => {
                   md:grid
                   md:grid-cols-2
 
-                  gap-6
+                  gap-5
                   md:gap-10
 
                   items-center
                 "
               >
-{/* MOBILE IMAGE FIRST */}
-<div
-  className="
-    relative
-    flex
-    items-center
-    justify-center
-    w-full
-
-    min-h-[120px]
-    md:min-h-[520px]
-
-    overflow-visible
-
-    order-2
-    md:order-2
-
-    mt-10
-    md:mt-0
-  "
->
-
-  {/* COMPOSITION WRAPPER */}
-  <div
-    className="
-      relative
-
-      w-[220px]
-      h-[120px]
-
-      md:w-[420px]
-      md:h-[420px]
-
-      flex
-      flex-col
-      items-center
-      justify-center
-    "
-  >
-
-    {/* IMAGE */}
-    <motion.img
-      key={current.image}
-      src={current.image}
-      alt={current.title}
-      initial={{
-        opacity: 0,
-        y: 80,
-        scale: 0.82,
-        rotate: -8,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        rotate: -8,
-      }}
-      exit={{
-        opacity: 0,
-        y: -40,
-        scale: 0.82,
-        rotate: -8,
-      }}
-      transition={{
-        duration: 1,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className={`
-        z-10
-        object-contain
-
-        drop-shadow-[0_30px_40px_rgba(0,0,0,0.12)]
-
-        ${
-          activeStep === 0
-            ? "w-[100px] md:w-[240px]"
-            : "w-[125px] md:w-[300px]"
-        }
-      `}
-    />
-
-    {/* LABEL */}
-    <motion.p
-      key={current.label}
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      exit={{
-        opacity: 0,
-        y: -20,
-      }}
-      transition={{
-        duration: 1,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="
-        mt-0
-
-        text-[35px]
-        md:text-[130px]
-
-        leading-none
-        whitespace-nowrap
-
-        font-cormorant
-        italic
-
-        text-black/90
-        pointer-events-none
-
-        md:absolute
-        md:top-[14%]
-        md:left-[18%]
-
-        md:-translate-x-1/2
-        md:-translate-y-1/2
-      "
-    >
-      {current.label}
-    </motion.p>
-
-  </div>
-
-</div>
 
                 {/* TEXT CONTENT */}
                 <div
-              className="
-  max-w-[500px]
+                  className="
+                    max-w-[500px]
 
-  order-1
-  md:order-1
-">
+                    order-1
+                  "
+                >
 
                   <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     className="
-                      text-[36px]
+                      text-[42px]
                       md:text-[64px]
 
                       leading-none
@@ -324,7 +196,7 @@ const ProcessSection = () => {
 
                       text-[#181818]
 
-                      mb-2
+                      mb-1
                     "
                   >
                     {current.title}
@@ -335,7 +207,7 @@ const ProcessSection = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 }}
                     className="
-                      text-[22px]
+                      text-[29px]
                       md:text-[48px]
 
                       leading-[115%]
@@ -345,7 +217,7 @@ const ProcessSection = () => {
 
                       text-[#181818]
 
-                      mb-4
+                      mb-3
                     "
                   >
                     {current.subtitle}
@@ -363,14 +235,146 @@ const ProcessSection = () => {
 
                       leading-[175%]
 
+                      font-[400]
                       font-urbanist
 
-                      max-w-[300px]
+                      max-w-[340px]
                       md:max-w-full
                     "
                   >
                     {current.desc}
                   </motion.p>
+
+                </div>
+
+                {/* IMAGE SECTION */}
+                <div
+                  className="
+                    relative
+                    flex
+                    items-center
+                    justify-center
+                    w-full
+
+                    min-h-[200px]
+                    md:min-h-[520px]
+
+                    overflow-visible
+
+                    order-2
+
+                    mt-2
+                    md:mt-0
+                  "
+                >
+
+                  {/* COMPOSITION WRAPPER */}
+                  <div
+                    className="
+                      relative
+
+                      w-[260px]
+                      h-[200px]
+
+                      md:w-[420px]
+                      md:h-[420px]
+
+                      flex
+                      flex-col
+                      items-center
+                      justify-center
+                    "
+                  >
+
+                    {/* IMAGE */}
+                    <motion.img
+                      key={current.image}
+                      src={current.image}
+                      alt={current.title}
+                      initial={{
+                        opacity: 0,
+                        y: 80,
+                        scale: 0.82,
+                        rotate: -8,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        rotate: -8,
+                      }}
+                      exit={{
+                        opacity: 0,
+                        y: -40,
+                        scale: 0.82,
+                        rotate: -8,
+                      }}
+                      transition={{
+                        duration: 1,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className={`
+                        z-10
+                        object-contain
+
+                        drop-shadow-[0_30px_40px_rgba(0,0,0,0.12)]
+
+                        ${
+                          activeStep === 0
+                            ? "w-[150px] md:w-[240px]"
+                            : "w-[185px] md:w-[300px]"
+                        }
+                      `}
+                    />
+
+                    {/* LABEL */}
+                    <motion.p
+                      key={current.label}
+                      initial={{
+                        opacity: 0,
+                        y: 20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      exit={{
+                        opacity: 0,
+                        y: -20,
+                      }}
+                      transition={{
+                        duration: 1,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="
+                        absolute
+
+                        bottom-[-5px]
+                        md:top-[14%]
+
+                        left-1/2
+                        md:left-[18%]
+
+                        -translate-x-1/2
+                        md:-translate-y-1/2
+
+                        text-[44px]
+                        md:text-[130px]
+
+                        leading-none
+                        whitespace-nowrap
+
+                        font-cormorant
+                        italic
+
+                        text-black/90
+                        pointer-events-none
+                      "
+                    >
+                      {current.label}
+                    </motion.p>
+
+                  </div>
 
                 </div>
 

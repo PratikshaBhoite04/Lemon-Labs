@@ -2,6 +2,10 @@ import Navbar from "../shared/Navbar";
 import lemonTree from "../assets/images/plant.png";
 import ProcessSection from "../components/ProcessSection";
 import Contact from "./Contact";
+import { motion } from "framer-motion";
+
+import lemon from "../assets/images/lemon1.png";
+import slicedLemon from "../assets/images/slicedLemon.png";
 
 const About = () => {
   return (
@@ -67,10 +71,258 @@ const About = () => {
 
         {/* Divider */}
         <div className="border-t border-black mt-14 md:mt-20"></div>
+{/* REALITY SECTION */}
+<section className="mt-10 md:mt-20 mb-20 md:mb-32 overflow-hidden">
 
-        {/* SPACING LIKE FIGMA */}
-        <div className="h-[180px] sm:h-[220px] md:h-[420px]"></div>
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.8 }}
+    className="text-center relative"
+  >
 
+    {/* LABEL */}
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className="
+      font-cormorant
+      italic
+      font-[700]
+      text-[#181818]
+
+      text-[16px]
+      md:text-[24px]
+
+      mb-8
+      md:mb-12
+      "
+    >
+      (or The Reality)
+    </motion.p>
+
+    {/* FIRST BLOCK */}
+    <div className="relative">
+
+      {/* IMAGE */}
+      <motion.img
+        initial={{ opacity: 0, y: 120 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.9,
+          delay: 0.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        src={lemon}
+        alt="Lemon"
+        className="
+        absolute
+
+        w-[70px]
+        sm:w-[100px]
+        md:w-[140px]
+
+        left-[18%]
+        md:left-[30%]
+
+        top-[55%]
+        md:top-[52%]
+
+        -translate-y-1/2
+
+        z-0
+        object-contain
+        "
+      />
+
+      {/* TEXT */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="
+        relative
+        z-10
+
+        flex
+        flex-wrap
+        items-center
+        justify-center
+        gap-2
+        "
+      >
+
+        <h2
+          className="
+          font-urbanist
+          font-[600]
+          text-[#181818]
+
+          text-[40px]
+          sm:text-[58px]
+          md:text-[88px]
+
+          leading-[1]
+          "
+        >
+          It’s easy to
+        </h2>
+
+        <h2
+          className="
+          font-cormorant
+          italic
+          font-[600]
+          text-[#F5DD53]
+
+          text-[44px]
+          sm:text-[64px]
+          md:text-[96px]
+
+          leading-none
+          "
+        >
+          launch.
+        </h2>
+
+      </motion.div>
+
+    </div>
+
+    {/* SECOND BLOCK */}
+ <div className="relative mt-24 md:mt-32">
+
+      {/* IMAGE */}
+      <motion.img
+        initial={{ opacity: 0, y: 120 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.9,
+          delay: 0.4,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        src={slicedLemon}
+        alt="Sliced Lemon"
+        className="
+        absolute
+
+        w-[100px]
+        sm:w-[150px]
+        md:w-[240px]
+
+        left-[28%]
+        md:left-[40%]
+
+        top-[58%]
+        md:top-[54%]
+
+        -translate-y-1/2
+
+        z-0
+        object-contain
+        "
+      />
+
+      {/* TEXT */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+        }}
+        className="
+        relative
+        z-10
+
+        flex
+        flex-wrap
+        items-center
+        justify-center
+        gap-2
+        "
+      >
+
+        <h2
+          className="
+          font-urbanist
+          font-[600]
+          text-[#181818]
+
+          text-[40px]
+          sm:text-[58px]
+          md:text-[88px]
+
+          leading-[1]
+          "
+        >
+          It’s Hard to
+        </h2>
+
+        <h2
+          className="
+          font-cormorant
+          italic
+          font-[600]
+          text-[#F5DD53]
+
+          text-[44px]
+          sm:text-[64px]
+          md:text-[96px]
+
+          leading-none
+          "
+        >
+          Survive.
+        </h2>
+
+      </motion.div>
+
+    </div>
+
+    {/* DESCRIPTION */}
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+      }}
+      className="
+      max-w-[900px]
+      mx-auto
+
+     mt-20
+md:mt-20
+      text-[#707070]
+
+      text-[15px]
+      sm:text-[18px]
+      md:text-[20px]
+
+      leading-[155%]
+
+      font-urbanist
+      font-[400]
+
+      px-4
+      "
+    >
+      The internet is full of products that looked promising
+      on day one — and fell apart by month six.
+    </motion.p>
+
+  </motion.div>
+
+</section>
        {/* WHY SECTION */}
 <div>
 
@@ -289,17 +541,50 @@ const About = () => {
 {/* DESCRIPTION */}
 <div className="mt-8 md:mt-12 w-full">
 
+  {/* MOBILE TEXT */}
   <p
     className="
+    block
+    md:hidden
+
+    text-start
+
+    font-urbanist
+    font-[500]
+
+    text-[#181818]
+
+    leading-[1.25]
+
+    text-[25px]
+
+    max-w-[320px]
+    mx-auto
+    "
+  >
+    We partner with people who are
+    building things that last.
+  </p>
+
+  {/* DESKTOP TEXT */}
+  <p
+    className="
+    hidden
+    md:block
+
     w-full
+
     font-urbanist
     font-[600]
+
     text-[#181818]
+
     leading-[1.12]
+
     tracking-[-0.03em]
-    text-[30px]
-    sm:text-[40px]
-    md:text-[50px]
+
+    text-[50px]
+
     max-w-[1320px]
     "
   >
@@ -308,7 +593,6 @@ const About = () => {
   </p>
 
 </div>
-
 {/* HOVER WORDS */}
 <div className="mt-14 md:mt-20 flex flex-col gap-10 md:gap-16">
 
