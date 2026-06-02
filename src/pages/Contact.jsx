@@ -170,7 +170,7 @@ className="scroll-mt-32 px-5 sm:px-6 md:px-20 pt-32 md:pt-20 pb-16 md:pb-20">
         leading-[85%]
 
         -mt-1
-        md:-mt-8
+        md:-mt-1
 
         text-[53px]
         sm:text-[72px]

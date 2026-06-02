@@ -51,7 +51,7 @@ const About = () => {
 
           <p
             className="
-            max-w-[920px]
+            max-w-[1000px]
             mx-auto
             mt-6
             md:mt-8
@@ -60,6 +60,7 @@ const About = () => {
             sm:text-[16px]
             md:text-[18px]
             font-urbanist
+            text-[#000000]
             leading-[165%]
             px-2
             "

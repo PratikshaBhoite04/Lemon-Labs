@@ -55,7 +55,7 @@ const Loader = ({ onFinish }) => {
     // DIVIDER APPEAR
     const dividerTimer = setTimeout(() => {
       setShowDivider(true);
-  }, 5400);
+    }, 5400);
 
     // OPEN PAGE
     const splitTimer = setTimeout(() => {
@@ -63,7 +63,7 @@ const Loader = ({ onFinish }) => {
       setShowDivider(false);
       setShowSplit(true);
 
-  }, 6400);
+    }, 6400);
 
     // FINISH
     const finishTimer = setTimeout(() => {
@@ -72,7 +72,7 @@ const Loader = ({ onFinish }) => {
 
       onFinish();
 
-   }, 7600);
+    }, 7600);
 
     return () => {
       clearInterval(imageInterval);
@@ -267,29 +267,27 @@ const Loader = ({ onFinish }) => {
                 <motion.img
                   key={step}
                   src={images[step]}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.88
-                  }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 1.06
-                  }}
+           initial={{
+  opacity: 0,
+  scale: [0.85, 1.1, 1.4, 1.9][step] * 0.88,
+}}
+animate={{
+  opacity: 1,
+  scale: [0.85, 1.1, 1.4, 1.9][step],
+}}
+exit={{
+  opacity: 0,
+  scale: [0.85, 1.1, 1.4, 1.9][step] * 1.06,
+}}
 transition={{
   duration: 0.9,
-  ease: [0.22, 1, 0.36, 1]
+  ease: [0.22, 1, 0.36, 1],
 }}
-                  className={`
-                    object-contain
-                    ${step === 0
-                      ? "w-[150px] md:w-[250px]"
-                      : "w-[180px] md:w-[330px]"
-                    }
-                  `}
+                  style={{
+                    width: "clamp(150px, 15vw, 300px)",
+                    height: "clamp(150px, 15vw, 300px)",
+                    objectFit: "contain",
+                  }}
                 />
 
               </AnimatePresence>

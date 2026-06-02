@@ -74,11 +74,11 @@ const Footer = () => {
 
         <p>© Lemon Labs. All rights reserved</p>
 
-        <div className="flex gap-6 text-[#BABABA] text-[14px] font-[400] font-urbanist">
+        {/* <div className="flex gap-6 text-[#BABABA] text-[14px] font-[400] font-urbanist">
           <Link to="#">Privacy</Link>
           <Link to="#">Terms</Link>
           <Link to="#">404</Link>
-        </div>
+        </div> */}
 
     <div className="flex gap-5 text-lg">
 

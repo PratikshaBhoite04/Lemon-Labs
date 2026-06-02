@@ -1,13 +1,13 @@
-import logo1 from "../assets/images/logo.svg";
-import logo2 from "../assets/images/logo.svg";
-import logo3 from "../assets/images/logo.svg";
-import logo4 from "../assets/images/logo.svg";
+import logo1 from "../assets/images/logo1.png";
+// import logo2 from "../assets/images/logo.svg";
+import logo3 from "../assets/images/logo3.png";
+import logo5 from "../assets/images/logo5.png";
 
 const clients = [
-  { name: "Shutterframe", logo: logo1 },
-  { name: "Refractional", logo: logo2 },
-  { name: "Shutterframe", logo: logo3 },
-  { name: "Watchtower", logo: logo4 },
+  { name: "Enwalk", logo: logo1 },
+  // { name: "Refractional", logo: logo2 },
+  { name: "Holla Americana", logo: logo3 },
+  { name: "Travel Desire", logo: logo5 },
 ];
 
 const Clients = () => {
@@ -56,11 +56,18 @@ const Clients = () => {
               key={index}
               className="flex items-center gap-3 shrink-0 opacity-90"
             >
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="h-5 md:h-6 object-contain"
-              />
+           <img
+  src={client.logo}
+  alt={client.name}
+  className={`
+    object-contain
+    ${
+      client.name === "Enwalk"
+        ? "h-10 md:h-14"
+        : "h-8 md:h-12"
+    }
+  `}
+/>
 
               <span className="font-urbanist font-[700] text-sm md:text-[25px] text-black whitespace-nowrap">
                 {client.name}
